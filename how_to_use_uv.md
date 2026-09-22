@@ -90,6 +90,7 @@ Traditionally, Python lockfiles only worked for the operating system they were b
 Would you like to know how to upgrade packages once they are locked in your uv.lock file, or should we look at how to build a Docker container using this lockfile for deployment?
 
 ---
+# uv sync : error: Failed to download   cause: client error (Connect)  cause: invalid peer certificate: UnknownIssuer
 This error means uv does not recognize or trust the security certificate being intercepted by your network.
 
 This almost always happens if you are on a corporate network, behind a VPN, or using a cybersecurity firewall (like Zscaler, Netskope, or Forcepoint). 
