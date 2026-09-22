@@ -20,18 +20,18 @@ A data scientist generally follows a structured, multi-step lifecycle to turn a 
 Python dominates data science because of its unmatched library ecosystem. The industry standard toolkit includes:
 
 * Data Wrangling:
-* Pandas: The traditional, Excel-like grid engine used to slice and dice datasets.
+   * Pandas: The traditional, Excel-like grid engine used to slice and dice datasets.
    * Polars: The high-performance, Rust-backed replacement that processes multi-gigabyte files significantly faster than Pandas.
 * Math & Numerics:
-* NumPy: Handles massive multi-dimensional matrix operations and high-level calculus instantly.
+   * NumPy: Handles massive multi-dimensional matrix operations and high-level calculus instantly.
 * Data Visualization:
-* Matplotlib & Seaborn: Static charts, histograms, and scatter plots.
+   * Matplotlib & Seaborn: Static charts, histograms, and scatter plots.
    * Plotly: Interactive, web-friendly graphs you can zoom and click on.
 * Machine Learning & AI:
-* Scikit-Learn: The go-to toolkit for classic ML tasks like regression, clustering, and decision trees.
+   * Scikit-Learn: The go-to toolkit for classic ML tasks like regression, clustering, and decision trees.
    * PyTorch: The undisputed champion for Deep Learning, used to train modern neural networks, Generative AI models, and LLMs.
 * Environments:
-* Jupyter Notebook: The interactive playground where data scientists mix raw Python code, markdown documentation, and live visual charts side-by-side.
+   * Jupyter Notebook: The interactive playground where data scientists mix raw Python code, markdown documentation, and live visual charts side-by-side.
 
 
 
