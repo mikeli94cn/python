@@ -88,3 +88,44 @@ Traditionally, Python lockfiles only worked for the operating system they were b
  
 
 Would you like to know how to upgrade packages once they are locked in your uv.lock file, or should we look at how to build a Docker container using this lockfile for deployment?
+
+---
+This error means uv does not recognize or trust the security certificate being intercepted by your network.
+
+This almost always happens if you are on a corporate network, behind a VPN, or using a cybersecurity firewall (like Zscaler, Netskope, or Forcepoint). 
+
+These systems intercept your HTTPS traffic and re-encrypt it using a custom corporate security certificate. 
+
+By default, uv relies on its own hardcoded bundle of trusted certificates, which doesn't include your company's private security keys.Here are the fixes to resolve this, from quickest to permanent.
+
+Behind the scenes, uv doesn't implement a library called "native-tls"; it just borrows your local operating system's native trust store. [1] 
+
+You can swap out the deprecated configuration using the updated standard in the Astral Docs: [2] 
+## 1. The Direct Command Flag
+Swap out --native-tls for --system-certs: [1] 
+```
+uv sync --system-certs
+```
+## 2. The Updated Environment Variables
+If you previously exported the variable in your shell configuration profile (like ~/.zshrc) or Windows environment settings, switch it to UV_SYSTEM_CERTS: [3] 
+
+* macOS / Linux (Bash/Zsh):
+```
+export UV_SYSTEM_CERTS=true
+```
+* Windows (PowerShell):
+```
+$env:UV_SYSTEM_CERTS="true"
+```
+ 
+
+## 3. The Permanent Configuration in uv.toml
+If you used a uv.toml file to automatically fix this behavior for your project or globally, change the key to system-certs = true: [2, 4] 
+
+# Inside your uv.toml file
+```
+system-certs = true
+```
+Updating this setting will silence the warning message and ensure your project sync workflow functions correctly in future versions of uv.
+
+Are you setting this up as a one-time local fix on your current computer, or do you need to share these certificate settings with a broader development team or a CI/CD deployment pipeline?
