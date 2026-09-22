@@ -66,16 +66,17 @@ This tells uv to pull down Jupyter into a temporary, isolated global cache, run 
 
 Would you like to initialize your very first project folder using uv right now, or are you ready to configure VS Code to automatically read your newly created uv environment?
 
-
+---
 uv.lock is an automatically generated, universal lockfile that records the exact version, cryptographic hash, and source of every single library installed in your project. [1, 2] 
 
 If pyproject.toml is your shopping list of general preferences (e.g., "I need Pandas version 2 or newer"), uv.lock is the exact store receipt detailing the definitive version that was actually downloaded (e.g., "Pandas 2.2.1 was installed alongside its sub-dependencies X, Y, and Z").
 
-## Why uv.lock is Essential## 1. It Guarantees Perfect Reproducibility
+## Why uv.lock is Essential
+### 1. It Guarantees Perfect Reproducibility
 If you write code that works today and a teammate tries to run it next month, standard setup files (pyproject.toml) might fetch newer patches of your libraries that accidentally break your code. Because uv.lock pins every single package down to the exact digit, anyone who clones your project will get the exact same environment. It completely eliminates the "it works on my machine" problem. [1, 2, 3] 
-## 2. It Resolves "Transitive Dependencies"
+### 2. It Resolves "Transitive Dependencies"
 When you install a major library like pandas, that library requires other behind-the-scenes libraries (like numpy and python-dateutil) to function. These are called transitive dependencies. While you only write pandas in your configuration file, uv.lock maps out the entire hidden tree of nested requirements so nothing is left to chance. [1, 4] 
-## 3. It is Universal (Cross-Platform)
+### 3. It is Universal (Cross-Platform)
 Traditionally, Python lockfiles only worked for the operating system they were built on (e.g., a lockfile built on Windows would crash on a Linux server). uv.lock is a universal lockfile. uv calculates the dependencies for Windows, macOS, and Linux simultaneously and saves them in this single file, allowing a teammate on Windows and a cloud deployment server on Linux to use it without compatibility errors. [1, 5] 
 
 ## The Rules of uv.lock
