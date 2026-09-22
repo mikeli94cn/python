@@ -21,6 +21,7 @@ Python's vast ecosystem of external libraries makes it a general-purpose languag
 
 ## A Simple Comparison
 To see why people love Python, look at how you print "Hello, World!" to a screen compared to Java:
+
 Java:
 ```java
 public class HelloWorld {
