@@ -57,5 +57,6 @@ dependencies = [
 ]
 ```
 Every time you run a command like uv add pandas, uv automatically opens this TOML file, locates the dependencies array, and cleanly appends the new library to the list.
+
 Would you like to open up your pyproject.toml file and look at how to manually restrict package versions, or are you curious about how Python reads TOML files natively using the tomllib built-in module?
 
