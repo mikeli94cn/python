@@ -46,14 +46,6 @@ pip install pandas
 ```
 To leave the environment when you are done working, simply type deactivate. [7, 10] 
 
-## Modern Context: venv vs uv
-As discussed earlier, venv is the old-school, standard library mechanism. [8, 11] 
-
-Tools like uv still create a .venv directory with the exact same internal architecture. 
-
-However, uv completely bypasses Python's slow, manual python -m venv commands and activates everything behind the scenes in milliseconds using Rust. [1, 8] 
-
-Would you like to see how to configure your IDE (like VS Code or PyCharm) to automatically recognize and use a venv folder when you open a project?
 
 ---
 uv is an all-in-one Python project and package manager, while a .venv directory is a local, isolated Python environment. 
@@ -90,9 +82,18 @@ A .venv directory is a "virtual environment" folder located inside your specific
 
 | Tool / Concept | Role in the Python Ecosystem |
 |---|---|
-| Python | The core programming language and runtime environment. |
 | .venv | The box where a specific project's Python version and libraries live. |
 | uv | The manager that automatically downloads Python, builds the .venv box, and instantly fills it with the packages you need. |
+
+## Modern Context: venv vs uv
+As discussed earlier, venv is the old-school, standard library mechanism. [8, 11] 
+
+Tools like uv still create a .venv directory with the exact same internal architecture. 
+
+However, uv completely bypasses Python's slow, manual python -m venv commands and activates everything behind the scenes in milliseconds using Rust. [1, 8] 
+
+Would you like to see how to configure your IDE (like VS Code or PyCharm) to automatically recognize and use a venv folder when you open a project?
+
 
 ## How they work together in practice
 When you use uv to manage a Python project, you rarely have to manage environments manually anymore. [1, 3] 
@@ -100,4 +101,3 @@ When you use uv to manage a Python project, you rarely have to manage environmen
    1. Creating the environment: When you run uv init followed by uv add <package-name>, uv automatically downloads the correct version of Python, creates the hidden .venv directory, and installs the package inside it. [1, 6] 
    2. Running code: Instead of manually running source .venv/bin/activate every time you open your terminal, you can simply type uv run python script.py. uv will automatically detect the .venv directory and execute the script using the correct, isolated environment. [1, 7] 
 
-Are you looking to migrate an existing Python project over to uv, or are you setting up a brand new project from scratch? I can provide the exact terminal commands to get you up and running.
