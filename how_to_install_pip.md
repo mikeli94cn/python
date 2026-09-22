@@ -9,8 +9,9 @@ Open your terminal (macOS/Linux) or Command Prompt (Windows) and run:
 * macOS/Linux: python3 -m pip --version [2] 
  
 
-If it returns a version number, pip is already installed. If you get a "command not found" or "No module named pip" error, proceed to Step 2. [3] 
-## Step 2: Install pip## Method A: Use the built-in ensurepip module (Recommended)
+If it returns a version number, pip is already installed. If you get a "command not found" or "No module named pip" error, proceed to Step 2.
+## Step 2: Install pip
+### Method A: Use the built-in ensurepip module (Recommended)
 This is the quickest option as it does not require downloading external files. Run the following command in your terminal: [1] 
 
  
@@ -18,7 +19,7 @@ This is the quickest option as it does not require downloading external files. R
 * macOS/Linux: python3 -m ensurepip --default-pip [2] 
  
 
-## Method B: Use the get-pip.py script
+### Method B: Use the get-pip.py script
 If ensurepip does not work, you can use the official standalone installer script. [2] 
 
    1. Securely download the script from the [Python Packaging User Guide](https://packaging.python.org/tutorials/installing-packages/) by right-clicking and saving get-pip.py to your computer. [2, 4] 
@@ -26,7 +27,7 @@ If ensurepip does not work, you can use the official standalone installer script
    * Windows: py get-pip.py
    * macOS/Linux: python3 get-pip.py [2, 5] 
    
-## Method C: Use Linux Package Managers
+### Method C: Use Linux Package Managers
 If you are on Linux, you can install pip system-wide via your distribution's package manager: [1] 
 
 
