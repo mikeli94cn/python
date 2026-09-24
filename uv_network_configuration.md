@@ -21,7 +21,9 @@ export HTTPS_PROXY="http://your-proxy-address:port"
 ```
 (Replace your-proxy-address:port with your actual corporate proxy address, such as http://company.com).
 ## Solution 2: Explicitly Trust TLS Certificates
-If your network intercepts connections (SSL decryption), uv will reject the download for safety reasons. You can instruct uv to look at your system certificates or temporarily disable strict verification to test if it bypasses the issue:
+If your network intercepts connections (SSL decryption), uv will reject the download for safety reasons. 
+
+You can instruct uv to look at your system certificates or temporarily disable strict verification to test if it bypasses the issue:
 
 Run your command with the --insecure flag to test if certificates are the core culprit:
 ```
