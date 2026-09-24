@@ -2,7 +2,9 @@ This error happens when uv tries to download packages via an HTTPS connection, b
 
 The InvalidContentType message means uv was expecting a standard Python package stream, but the network connection handed back an unexpected layout—usually a plain text/HTML block containing an error page like a proxy login wall or a connection reset notice.
 ## Solution 1: Pass Your System Proxy to uv
-If you are behind a company network or a VPN, uv needs to be told exactly how to route through your proxy. Open your terminal and set your proxy environment variables before running your command:
+If you are behind a company network or a VPN, uv needs to be told exactly how to route through your proxy. 
+
+Open your terminal and set your proxy environment variables before running your command:
 
 On Windows (Command Prompt):
 ```
