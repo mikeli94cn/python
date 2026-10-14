@@ -1,4 +1,6 @@
-Using uv is incredibly simple because it automates the tedious steps of traditional Python setups. You do not need to manually manage virtual environments, install Python versions separately, or continuously activate sandboxes. [1, 2] 
+Using uv is incredibly simple because it automates the tedious steps of traditional Python setups. 
+
+You do not need to manually manage virtual environments, install Python versions separately, or continuously activate sandboxes. [1, 2] 
 
 The tool divides day-to-day Python tasks into three clear workflows: [3] 
 
