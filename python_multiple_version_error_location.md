@@ -12,8 +12,7 @@ Because Python 3.12 is trying to run using Python 3.7's core files, it crashes i
 
 Here is why this happens and how to fix it permanently.
 
-Why is this happening?
-
+## Why is this happening?
 
 
 When you type pip, Windows looks through your system's PATH environment variable from top to bottom.
@@ -21,20 +20,22 @@ When you type pip, Windows looks through your system's PATH environment variable
 2. However, your Python 3.7 directory is likely listed higher in the environment variables or a PYTHONPATH variable is forcing Python to look into the Python37 folder first.
 3. Python 3.12 opens, tries to load its system modules, but accidentally grabs Python 3.7's importlib, causing a version mismatch (AttributeError).
 
-How to fix it
+## How to fix it
 
 
-Step 1: Use explicit Python launchers (Quick Fix)
+### Step 1: Use explicit Python launchers (Quick Fix)
 
 Instead of running pip directly, use the Windows Python launcher (py) or the explicit path. This bypasses the environment variable confusion.
-* To use Python 3.12's pip:cmd
+* To use Python 3.12's pip:
+```cmd
 py -3.12 -m pip install <package_name>
-Use code with caution.
-* To use Python 3.7's pip:cmd
+```
+* To use Python 3.7's pip:
+```
 py -3.7 -m pip install <package_name>
-Use code with caution.
+```
 
-Step 2: Clean up your Environment Variables (Permanent Fix)
+### Step 2: Clean up your Environment Variables (Permanent Fix)
 
 To make the standard pip command work cleanly, you need to fix your Windows PATH settings.
 1. Press Win + R, type sysdm.cpl, and press Enter.
@@ -50,4 +51,3 @@ D:\Program Files\Python37\
 ```
 7. Click OK on all windows to save.
 8. Crucial: Close your current command prompt / terminal and open a brand new one for the changes to take effect.
-Let me know if you are using CMD, PowerShell, or Git Bash, or if you need help locating your Environment Variables window so I can guide you through the exact clicks.
