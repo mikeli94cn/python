@@ -118,7 +118,7 @@ You can run a standalone Python script (.py file) in JupyterLab using three diff
 ## Method 1: Using a Jupyter Notebook (Most Common)
 If you are working inside an active .ipynb notebook file, you can execute an external Python script directly inside a code cell using IPython Magic Commands. [1, 2] 
 
-* 
+
 * The %run command (Recommended): Type this into a cell and press Shift + Enter:
 ```
 %run my_script.py
