@@ -23,3 +23,5 @@ Think of a typical machine learning pipeline as a factory line where these libra
 3. TensorFlow or PyTorch (The Brains): Finally, you feed those numbers (converted into "tensors") into TensorFlow or PyTorch. These frameworks run heavy math across graphics cards (GPUs) to train a neural network to make predictions.
 
 
+recommend reading: 
+[All Python Libraries You Need For Machine Learning And Data Science](https://patloeber.com/python-libraries-for-machine-learning/)
