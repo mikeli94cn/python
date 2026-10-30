@@ -1,4 +1,5 @@
 Here is the Python script optimized for processing very large Excel files.
+                                   
 For a file with a million rows, loading the entire dataset into memory using standard libraries can cause your system to run out of RAM. To handle this efficiently, this script uses openpyxl in read-only and write-only modes, which streams the data line by line and keeps memory usage extremely low.
 
 ```python
